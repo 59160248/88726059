@@ -16,6 +16,38 @@
         <tr>
             <th><h3>Hotel Booking</h3></th>
         </tr>
+        <tr>
+            <td><form method="POST" action="https://angsila.cs.buu.ac.th/~wittawas/632/88726059/lab02/afile.php">
+                <label for="roomtype">Room Type : </label>
+                <select name="roomtype" style="width:250px;">
+                        <option value="0">Please Select</option>
+                        <option value="1">Standard</option>
+                        <option value="2">Luxury</option>
+                        <option value="3">Deluxe</option>
+                    </select>
+                <br>
+                <label for="numguest">Number of Guest : </label> 
+                <select name="numguest" style="width:250px;">
+                        <option value="0">Please Select</option>
+                        <option value="1">1-2</option>
+                        <option value="2">3-4</option>
+                        <option value="3">5-6</option>
+                        <option value="3">7-8</option>
+                    </select>
+                <br>
+                <label for="fname">Name : </label>
+                <input type="text" name="fname" id="fname">
+                <label for="lname">Last : </label>
+                <input type="text" name="lname" id="lname">
+                <br>
+                <label for="email">Email : </label>
+                <input type="email" name="email" id="email" style="width:250px;">
+                <br><br>
+                <input type="submit" value="Send">
+                <input type="reset" value="Clear">
+            </form> 
+            </td>
+        </tr>
     </table>
 </body>
 </html>
