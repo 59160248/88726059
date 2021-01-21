@@ -1,0 +1,37 @@
+body{
+    font-size: 12px;
+    font-family: Tahoma;
+}
+p{
+    text-indent: 50px;
+    text-transform: uppercase;
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 30em;
+    margin-right: 30em;
+}
+
+h1,h2,h3,ul,td{
+    font-size: 12px;
+    font-family: Tahoma;
+    text-align: center;
+}
+table, th, td {
+    font-size: 12px;
+    font-family: Tahoma;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 5px;
+}
+li,th{
+    text-align: left;
+}  
+#whiteborder{
+    font-size: 12px;
+    font-family: Tahoma;
+    border: 1px solid white;
+    border-collapse: collapse;
+}
