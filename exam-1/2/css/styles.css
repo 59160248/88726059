@@ -35,3 +35,14 @@ li,th{
     border: 1px solid white;
     border-collapse: collapse;
 }
+#bglightblue{
+    background-color: lightblue;
+
+}
+h1.sofia{
+    font-family: 'Sofia';
+    font-size: 12px;
+}
+p.blue{
+    color: blue;
+}
