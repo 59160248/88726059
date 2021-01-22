@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>POW</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link href='https://fonts.googleapis.com/css?family=Gorditas' rel='stylesheet'>
     <script>
         function getpow(){
             var x = document.getElementById("hide");
@@ -20,25 +21,26 @@
 <body>
     <table>
         <tr>
-            <td><h1>เลขยกกำลัง</h1></td>
+            <td colspan="2">เลขยกกำลัง <b id="gorditas">Exponent</b></td>
+        </tr>
+        <tr>
         </tr>
         <tr>
             <td>ใส่ตัวเลขที่ต้องการจะยกกำลัง 
                 <input type="text" id="intput"></td>
             <td> ยกกำลังด้วย 
                 <input type="text" id="pow"></td>
-            <td><input type="button" id="getpow" value="ยกกำลัง" onclick="getpow();"></td>
+            <td><input type="button" class="button sub" id="getpow" value="ยกกำลัง" onclick="getpow();"></td>
         </tr>
     </table>
-    <br>
     <div id="hide">
         <table>
             <tr>
-                <td id="number"></td>
+                <td class="number"; id="number"></td>
                 <td>ยกกำลัง</td>
-                <td id="pownumber"></td>
+                <td class="number"; id="pownumber"></td>
                 <td>เท่ากับ</td>
-                <td id="cal"></td>
+                <td class="cal" id="cal"></td>
             </tr>
         </table>
     </div>

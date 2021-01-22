@@ -4,3 +4,47 @@
 input{
     width: 70px;
 }
+th, td {
+    padding: 5px;
+}
+body{
+    font-size: 16px;
+    font-family: Tahoma;
+}
+
+#gorditas{
+    color: blue;
+    font-size: 22px;
+    font-family: 'Gorditas';
+}
+td.number{
+    color: darkgoldenrod;
+    font-family: 'ABeeZee';
+    font-size: 22px;
+}
+td.cal{
+    color: red;
+    font-family: 'Amita';
+    font-size: 22px;
+}
+.button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+  .sub {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #4CAF50;
+  }
+  
+  .sub:hover {
+    background-color: #4CAF50;
+    color: white;
+  }
