@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MoneyConverter</title>
+    <style>
+        #hide{
+            display: none;
+        }
+    </style>
+    <script>
+        var thousand;
+        var fivehundred;
+        var hundred;
+        var fifty;
+        var twenty;
+        var ten;
+        var five;
+        var two;
+        var one;
+        function convert(){
+            var x = document.getElementById("hide");
+            x.style.display = "block";
+            //1000
+            var number = document.getElementById('number').value;
+            var newnumber = number%1000;
+            thousand = (number - newnumber)/1000;
+            document.getElementById("thousand").innerHTML = thousand;
+            number = newnumber;
+            //500
+            newnumber = number%500;
+            fivehundred = (number - newnumber)/500;
+            document.getElementById("fivehundred").innerHTML = fivehundred;
+            number = newnumber;
+            //100
+            newnumber = number%100;
+            hundred = (number - newnumber)/100;
+            document.getElementById("hundred").innerHTML = hundred;
+            number = newnumber;
+            //50
+            newnumber = number%50;
+            fifty = (number - newnumber)/50;
+            document.getElementById("fifty").innerHTML = fifty;
+            number = newnumber;
+            //20
+            newnumber = number%20;
+            twenty = (number - newnumber)/20;
+            document.getElementById("twenty").innerHTML = twenty;
+            number = newnumber;
+            //10
+            newnumber = number%10;
+            ten = (number - newnumber)/10;
+            document.getElementById("ten").innerHTML = ten;
+            number = newnumber;
+            //5
+            newnumber = number%5;
+            five = (number - newnumber)/5;
+            document.getElementById("five").innerHTML = five;
+            number = newnumber;
+            //2
+            newnumber = number%2;
+            two = (number - newnumber)/2;
+            document.getElementById("two").innerHTML = two;
+            number = newnumber;
+            //1
+            newnumber = number%1;
+            one = (number - newnumber)/1;
+            document.getElementById("one").innerHTML = one;
+            number = newnumber;
+
+
+        }
+    </script>
+</head>
+<body>
+    <table>
+        <tr>
+            <td><input type="text" id="number" ></td>
+            <td><input type="button" id="convert" value="convert" onclick="convert();"></td>
+        </tr>
+    </table>
+    <div id="hide">
+    <table>
+    <tr>
+        <td>ธนบัตร 1000 บาท :</td>
+        <td id="thousand"></td>
+        <td>ใบ</td>
+    </tr>
+    <tr>
+        <td>ธนบัตร 500 บาท :</td>
+        <td id="fivehundred"></td>
+        <td>ใบ</td>
+    </tr>
+    <tr>
+        <td>ธนบัตร 100 บาท :</td>
+        <td id="hundred"></td>
+        <td>ใบ</td>
+    </tr>
+    <tr>
+        <td>ธนบัตร 50 บาท :</td>
+        <td id="fifty"></td>
+        <td>ใบ</td>
+    </tr>
+    <tr>
+        <td>ธนบัตร 20 บาท :</td>
+        <td id="twenty"></td>
+        <td>ใบ</td>
+    </tr>
+    <tr>
+        <td>เหรียญ 10 บาท :</td>
+        <td id="ten"></td>
+        <td>เหรียญ</td>
+    </tr>
+    <tr>
+        <td>เหรียญ 5 บาท :</td>
+        <td id="five"></td>
+        <td>เหรียญ</td>
+    </tr>
+    <tr>
+        <td>เหรียญ 2 บาท :</td>
+        <td id="two"></td>
+        <td>เหรียญ</td>
+    </tr>
+    <tr>
+        <td>เหรียญ 1 บาท :</td>
+        <td id="one"></td>
+        <td>เหรียญ</td>
+    </tr>                    
+    </table>
+    </div>
+</body>
+</html>
