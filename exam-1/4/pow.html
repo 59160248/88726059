@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POW</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script>
+        function getpow(){
+            var x = document.getElementById("hide");
+            x.style.display = "block";
+            var number = document.getElementById('intput').value;
+            document.getElementById("number").innerHTML = number;
+            var pownumber = document.getElementById('pow').value;
+            document.getElementById("pownumber").innerHTML = pownumber;
+            document.getElementById("cal").innerHTML = Math.pow(number,pownumber);
+        }
+    </script>
+</head>
+<body>
+    <table>
+        <tr>
+            <td><h1>เลขยกกำลัง</h1></td>
+        </tr>
+        <tr>
+            <td>ใส่ตัวเลขที่ต้องการจะยกกำลัง 
+                <input type="text" id="intput"></td>
+            <td> ยกกำลังด้วย 
+                <input type="text" id="pow"></td>
+            <td><input type="button" id="getpow" value="ยกกำลัง" onclick="getpow();"></td>
+        </tr>
+    </table>
+    <br>
+    <div id="hide">
+        <table>
+            <tr>
+                <td id="number"></td>
+                <td>ยกกำลัง</td>
+                <td id="pownumber"></td>
+                <td>เท่ากับ</td>
+                <td id="cal"></td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
