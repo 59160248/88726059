@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Authors</title>
+    
+</head>
+<body onload="show()">
+    <p id="show"></p>
+    
+    <script>
+        var authors = [
+            { authorID: 1111, author: 'wittawas', penname: 'witty100' },
+            { authorID: 1112, author: 'jakkarin', penname: 'พ่อบ้านใจกล้า' },
+            { authorID: 1113, author: 'worawit', penname: 'obob' }
+            ];
+        function show(){
+            var x = " ";
+            x = "<h3>" + "ผู้แต่ง" + "</h3>" + "<hr width='250', size='5', color='BBBBBB', align='left'>";
+            for(i in authors){
+                x += "รหัส : " + authors[i].authorID + "<br>"
+                + "ชื่อ : " + authors[i].author + "<br>" 
+                + "นามปากกา : "+ authors[i].penname + "<br>"
+                + "<hr width='250', size='5', color='BBBBBB', align='left'>"; 
+            }
+            document.getElementById("show").innerHTML = x;
+        }
+    </script>
+</body>
+</html>
