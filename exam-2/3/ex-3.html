@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authors</title>
+</head>
+<body>
+    <h3>ผู้แต่ง</h3>
+    <hr width="250", size="5", color="BBBBBB", align="left">
+
+        <label for="aid">รหัสผู้แต่ง</label><br>
+        <input type="text" id="aid" name="aid" onfocus="this.value=''"><br>
+        <label for="a">ชื่อผู้แต่ง</label><br>
+        <input type="text" id="a" name="a" onfocus="this.value=''"><br>
+        <label for="pen">นามปากกา</label><br>
+        <input type="text" id="pen" name="pen" onfocus="this.value=''"><br><br>
+        <input type="button" value="Save" onclick="show()">
+
+
+    <hr width="250", size="5", color="BBBBBB", align="left">
+        <p id="show"></p>
+
+    <script>
+         var authors = [
+            { authorID: 1111, author: 'wittawas', penname: 'witty100' },
+            { authorID: 1112, author: 'jakkarin', penname: 'พ่อบ้านใจกล้า' },
+            { authorID: 1113, author: 'worawit', penname: 'obob' }
+            ];
+
+        function show(){
+            var empt1 = document.getElementById("aid").value;
+            var empt2 = document.getElementById("a").value;
+            var empt3 = document.getElementById("pen").value;
+            
+           
+
+            if (empt1 === "" || empt2 === "" || empt3 === ""){
+                alert("Please input a Value");
+
+            }else{
+                authors.push({authorID : document.getElementById("aid").value, 
+                            author : document.getElementById("a").value,
+                            penname : document.getElementById("pen").value,});
+            
+        }
+            var obj = JSON.stringify(authors);
+            localStorage.setItem("authors",obj);
+            var text = localStorage.getItem("authors");
+            authors = JSON.parse(text);
+            var x = " ";
+            for(i in authors){
+                x += "รหัส : " + authors[i].authorID + "<br>"
+                + "ชื่อ : " + authors[i].author + "<br>" 
+                + "นามปากกา : "+ authors[i].penname + "<br>"
+                + "<hr width='250', size='5', color='BBBBBB', align='left'>"; 
+            }
+            document.getElementById("show").innerHTML = x;
+            
+            
+            
+        }
+    </script>
+</body>
+</html>
