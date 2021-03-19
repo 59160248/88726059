@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authors</title>
+</head>
+<body>
+    <h3>ผู้แต่ง</h3>
+    <hr width='250', size='5', color='BBBBBB', align='left'>
+    <div id="show"></div>
+
+<script>
+var xmlhttp = new XMLHttpRequest();
+var authors,show;
+xmlhttp.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+    show = document.getElementById("show");
+    show.innerHTML = this.responseText;
+  }
+}
+xmlhttp.open("GET", "authors.php", true);
+xmlhttp.send();
+</script>
+    
+</body>
+</html>
