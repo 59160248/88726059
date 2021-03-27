@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="main.css" />
+    <title>addNew</title>
+    <style>
+        .container > div{
+            position: relative;
+            min-height: 100vh;
+        }
+      .footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;            /* Footer height */
+  }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="../index.html">Shopping info</a>
+          </div>
+          <ul class="nav navbar-nav">
+            <li><a href="../index.html">หน้าแรก</a></li>
+            <li class="active"><a href="addNew.html">เพิ่มข้อมูล</a></li>
+          </ul>
+        </div>
+      </nav>
+      <div class="container">
+        <h1>Add New Data</h1>
+    <form action="add.php" method="POST">
+        <label for="itemID">รหัสสินค้า : </label>
+        <input type="text" id="itemID" name="itemID"  placeholder="ใส่รหัสสินค้า" size="50"><br><br>
+        <label for="itemName">ขื่อสินค้า : </label>
+        <input type="text" id="itemName" name="itemName"  placeholder="ใส่ชื่อสินค้า" size="50"><br><br>
+        <label for="itemDetail">ข้อมูลสินค้า : </label><br>
+        <input  type="text" id="itemDetail" name="itemDetail"  placeholder="ใส่ข้อมูลสินค้า" size="90"><br><br>
+        <label for="itemPrice">ราคาสินค้า : </label>
+        <input  type="text" id="itemPrice" name="itemPrice"  placeholder="ใส่ราคาสินค้า หน่วยเป็นบาท จำนวนเต็ม" size="50"><br><br>
+        <input type="submit" value="บันทึก" class="btn btn-primary"> 
+    </form>
+      </div>
+
+      <footer  class="footer">
+        <ul class="pager">
+          <li class="previous"><a href="../index.html">กลับหน้าหลัก</a></li>
+        </ul>
+      </footer>
+</body>
+</html>
